@@ -1,0 +1,40 @@
+
+
+{% include 'layouts/header.html' %}
+
+
+    <div class="loginRegisterContainer">
+
+        <div class="loginRegisterBox">
+
+            <form>
+
+                <div class="form-group">
+                    <label><small class="text-muted">User Name</small></label>
+                    <input class="form-control" type="text" name="userName" autocomplete="off" />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label><small class="text-muted">Password</small></label>
+                    <input class="form-control" type="password" name="password" />
+                </div>
+
+                <div class="form-group mt-4">
+                    <button class="btn btn-primary form-control">Login</button>
+                </div>
+
+                <div class="form-group mt-3 text-center">
+                    <a href="{{ url_for( 'startRegister' ) }}"><small>Subscribe here</small></a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+{% include 'layouts/footer.html' %}
+    
+
+

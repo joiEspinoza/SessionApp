@@ -1,0 +1,69 @@
+
+{% include 'layouts/header.html' %}
+
+    <div class="loginRegisterContainer">
+
+        <div class="loginRegisterBox">
+
+            
+
+            <form action="/register" method="POST" >
+
+                {% with messeges = get_flashed_messages() %}
+
+                    {% if messeges %}
+
+                        {% for msg in messeges %}
+
+                            <div class="alert alert-dark" role="alert">
+
+                                {{ msg }}
+
+                            </div> 
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endwith %}
+
+                <div class="form-group">
+                    <label><small class="text-muted">User Name</small></label>
+                    <input class="form-control" type="text" name="userName" autocomplete="off" />
+                </div>
+
+
+                <div class="form-group mt-2">
+                    <label><small class="text-muted">Email</small></label>
+                    <input class="form-control" type="text" name="email" autocomplete="off" />
+                </div>
+
+
+                <div class="form-group mt-2">
+                    <label><small class="text-muted">Password</small></label>
+                    <input class="form-control" type="password" name="password" />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label><small class="text-muted">Confirm Password</small></label>
+                    <input class="form-control" type="password" name="password2" />
+                </div>
+
+
+                <div class="form-group mt-4">
+                    <button class="btn btn-primary form-control">Register</button>
+                </div>
+
+
+                <div class="form-group mt-3 text-center">
+                    <a href="{{ url_for( 'index' ) }}"><small>Back</small></a>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+{% include 'layouts/footer.html' %}
