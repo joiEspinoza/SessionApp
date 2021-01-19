@@ -1,12 +1,13 @@
 
+
 {% include 'layouts/header.html' %}
+
 
     <div class="loginRegisterContainer">
 
         <div class="loginRegisterBox">
 
-            
-            <form action="/register" method="POST" >
+            <form action="/login" method="POST">
 
                 {% with messeges = get_flashed_messages() %}
 
@@ -31,36 +32,19 @@
                     <input class="form-control" type="text" name="userName" autocomplete="off" value="King" />
                 </div>
 
-
-                <div class="form-group mt-2">
-                    <label><small class="text-muted">Email</small></label>
-                    <input class="form-control" type="text" name="email" autocomplete="off" value="King@gmail.com" />
-                </div>
-
-
                 <div class="form-group mt-2">
                     <label><small class="text-muted">Password</small></label>
                     <input class="form-control" type="password" name="password" value="123456" />
                 </div>
 
-                <div class="form-group mt-2">
-                    <label><small class="text-muted">Confirm Password</small></label>
-                    <input class="form-control" type="password" name="password2" value="123456" />
-                </div>
-
-
                 <div class="form-group mt-4">
-
-                    <button id="registerLogin" class="btn btn-primary form-control">Register</button>
+                    <button id="registerLogin" class="btn btn-primary form-control">Login</button>
                     <button id="loading" class="btnDisabled btn btn-primary form-control" hidden ><i class="fas fa-circle-notch fa-spin"></i></button>
-
                 </div>
-
 
                 <div class="form-group mt-3 text-center">
-                    <a href="{{ url_for( 'startLogin' ) }}"><small>Back</small></a>
+                    <a href="{{ url_for( 'startRegister' ) }}"><small>Subscribe here</small></a>
                 </div>
-
 
             </form>
 
@@ -68,4 +52,8 @@
 
     </div>
 
+
 {% include 'layouts/footer.html' %}
+    
+
+
